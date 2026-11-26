@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #1f2937;
+  background: #fff7ed;
+}
+header,
+main,
+footer {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+.site-header {
+  background: #ea580c;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+.tagline {
+  margin: 0.25rem 0 0;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-list a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: #fef3c7;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: #ffffff;
+  color: #ea580c;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+}
+section,
+article,
+aside,
+footer {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+h1,
+h2,
+h3 {
+  color: #c2410c;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.category-card {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.restaurant-card {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.restaurant-card:hover,
+.restaurant-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.2);
+}
+.cuisine {
+  color: #4b5563;
+}
+.rating {
+  color: #b45309;
+  font-weight: bold;
+}
+.delivery {
+  color: #166534;
+}
+@media (min-width: 48rem) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .nav-list {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .restaurant-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@container (min-width: 30rem) {
+  .restaurant-card {
+    padding: 1.25rem;
+  }
+}
